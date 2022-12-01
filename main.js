@@ -48,23 +48,26 @@ const listaDeProductos = [];
 listaDeProductos.push({
     nombre: "bike",
     precio: 500000,
-    imagen: "https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+    imagen: "./imagenes/bike.png"
 })
 listaDeProductos.push({
     nombre: "TV",
     precio: 1200000,
-    imagen: "https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+    imagen: "./imagenes/TV.png"
 })
 listaDeProductos.push({
     nombre: "juego de sala",
     precio: 1500000,
-    imagen: "https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+    imagen: "./imagenes/juego de sala.png"
 })
 listaDeProductos.push({
     nombre: "computador",
     precio: 2000000,
-    imagen: "https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+    imagen: "./imagenes/computador.png"
 })
+
+
+function renderizarProductos(listaDeProductos){
 
   for (producto of listaDeProductos){
     const tarjetaProducto = document.createElement("div");
@@ -77,13 +80,13 @@ listaDeProductos.push({
         const informacionProducto = document.createElement("div");
         informacionProducto.classList.add("product-info");
 
-            const divDeinfo = createElement("div");
+            const divDeinfo = document.createElement("div");
             divDeinfo.classList.add("divInfo")
             
                 const precioDelProducto = document.createElement("p");
                 precioDelProducto.innerHTML = "$ " + producto.precio;
                 const nombreDelProducto = document.createElement("p");
-                nombreDelProducto.innerHTML = nombre.precio;
+                nombreDelProducto.innerHTML = producto.nombre;
 
             const etiquetaFigure = document.createElement("figure");
 
@@ -98,8 +101,11 @@ listaDeProductos.push({
     informacionProducto.appendChild(divDeinfo);
     informacionProducto.appendChild(etiquetaFigure);
 
-    divDeinfo.appendChild(precioDelProducto, nombreDelProducto);
+    divDeinfo.appendChild(precioDelProducto);
+    divDeinfo.appendChild(nombreDelProducto);
 
     etiquetaFigure.appendChild(imgFigure);
   }
+}
   
+renderizarProductos(listaDeProductos)
