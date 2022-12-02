@@ -127,6 +127,9 @@
   /*mobile menu*/
 
   .mobile-menu {
+    left: 0;
+    width: 40%;
+    min-width: 150px;
     border: 1px #482c9d solid;
     border-radius: 20px;
     position: absolute;
@@ -168,13 +171,16 @@
     border: 5px #acd9b2 solid;
     border-radius: 20px;
     width: 360px;
-    padding: 24px;
     box-sizing: border-box;
     position: absolute;
     right: 0;
   }
 
   /* EStilos de la pestaña de venta de productos 1 */
+
+  .productDetail{
+    padding: 24px;
+  }
 
   .title-container {
     display: flex;
@@ -246,6 +252,9 @@
 
   /* EStilos de la pestaña de venta de producto 2 */
 
+  .productDetail-2{
+  padding-bottom: 20px;
+  }
   .product-detail-close {
     background: var(--white);
     width: 14px;
